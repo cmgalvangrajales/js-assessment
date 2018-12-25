@@ -12,6 +12,10 @@ flowControlAnswers = {
    * @returns {String} The string 'fizz', 'buzz', or 'fizzbuzz'
    */
   fizzBuzz: function fizzBuzz(num) {
-
+    if (Number.isInteger(num)) {
+      const isFizz = (num % 3 == 0) ? true : false;
+      const isBuzz = (num % 5 == 0) ? true : false;
+      return (isFizz && isBuzz) ? "fizzbuzz" : (isFizz) ? "fizz" : (isBuzz) ? "buzz" : num;
+    } else return false;
   },
 };
